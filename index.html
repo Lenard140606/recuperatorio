@@ -1,14 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Directorio de Contactos</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>Examen Recuperatorio</h1>
-    <!-- Escribe aquí todo tu HTML -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Directorio de Contactos</h1>
+        
+        <!-- Formulario para agregar contactos -->
+        <form id="contact-form">
+            <div class="input-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" placeholder="Nombre completo" required>
+            </div>
+            <div class="input-group">
+                <label for="phone">Teléfono</label>
+                <input type="tel" id="phone" placeholder="Número de teléfono" required>
+            </div>
+            <button type="submit" id="btn-submit">Agregar</button>
+        </form>
+
+        <!-- Buscador en tiempo real -->
+        <div class="search-group">
+            <input type="text" id="search" placeholder="Buscar contacto por nombre...">
+        </div>
+
+        <!-- Contador y Lista de contactos -->
+        <div class="stats">
+            <span id="counter">Contactos: 0</span>
+        </div>
+
+        <ul id="contact-list">
+            <!-- Los contactos se inyectarán dinámicamente con JavaScript -->
+            <p id="empty-message">Todavía no agregaste contactos.</p>
+        </ul>
+    </div>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
