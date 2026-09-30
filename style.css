@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+/* Estilos del Formulario */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #666;
+    font-weight: 600;
+}
+
+.input-group input, .search-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus, .search-group input:focus {
+    outline: none;
+    border-color: #2b7a78;
+}
+
+#btn-submit {
+    background-color: #2b7a78;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#btn-submit:hover {
+    background-color: #1a5251;
+}
+
+/* Buscador */
+.search-group {
+    margin-bottom: 20px;
+}
+
+/* Contador */
+.stats {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Lista de contactos */
+#contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+#empty-message {
+    text-align: center;
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.contact-item {
+    background-color: #f8f9fa;
+    padding: 12px 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid #2b7a78;
+    animation: fadeIn 0.3s ease;
+}
+
+.contact-info strong {
+    display: block;
+    color: #333;
+    font-size: 16px;
+}
+
+.contact-info span {
+    color: #666;
+    font-size: 14px;
+}
+
+.btn-delete {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #c81d25;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
